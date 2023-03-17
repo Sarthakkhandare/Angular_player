@@ -1,0 +1,23 @@
+<p>viewproduct works!</p>
+<table border="2">
+
+    <tr>
+        <th>pid</th>
+        <th>Produc_tName</th>
+        <th>Product_Addr</th>
+        <th>sid</th>
+        <th>Supplier_name</th>
+        <th>Supplier_Contact</th>
+        <th colspan="2">ACTION</th>
+    </tr>
+    <tr *ngFor="let s of product">
+        <td>{{s.pid}}</td>
+        <td>{{s.productname}}</td>
+        <td>{{s.productaddress}}</td>
+        <td>{{s.supplyer.sid}}</td>
+        <td>{{s.supplyer.supplyername}}</td>
+        <td>{{s.supplyer.supplyercontact}}</td>
+        <td><button class="btn btn-outline-warning" (click)="editproduct(s)">Edit</button></td>
+        <td><button class="btn btn-outline-warning" (click)="deltedata(s)">Delete</button></td>
+    </tr>
+</table>
